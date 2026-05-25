@@ -1,0 +1,100 @@
+<!doctype html>
+<html lang="ko">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width,initial-scale=1" />
+<title>문혜영 — UX/Service Planner</title>
+<meta name="description" content="10년차 UX/서비스 기획자 문혜영의 포트폴리오. B2B SaaS·이커머스 기획, 0→1 신규 서비스, AI 도구 통합 단독 풀스택 기획." />
+
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&display=swap" rel="stylesheet" />
+<link rel="stylesheet" as="style" crossorigin href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/variable/pretendardvariable.min.css" />
+
+<script src="https://cdn.tailwindcss.com"></script>
+<script>
+  tailwind.config = {
+    theme: {
+      extend: {
+        colors: {
+          ink: '#0A0A0A',
+          paper: '#FFFFFF',
+          cream: '#F7F6F2',
+          line: '#E7E5E0',
+          mute: '#6B6B6B',
+          subtle: '#A3A3A3',
+          accent: '#E5481F',
+        },
+        fontFamily: {
+          sans: ['"Pretendard Variable"', 'Pretendard', 'system-ui', 'sans-serif'],
+          serif: ['"Instrument Serif"', 'ui-serif', 'Georgia', 'serif'],
+        },
+        letterSpacing: {
+          tightish: '-0.02em',
+          tighter2: '-0.035em',
+        },
+        maxWidth: {
+          container: '1320px',
+        },
+      },
+    },
+  };
+</script>
+
+<style>
+  html { scroll-behavior: smooth; }
+  body {
+    background: #FFFFFF;
+    color: #0A0A0A;
+    font-family: 'Pretendard Variable', Pretendard, system-ui, -apple-system, sans-serif;
+    font-feature-settings: 'ss06', 'ss03';
+    -webkit-font-smoothing: antialiased;
+    text-rendering: optimizeLegibility;
+  }
+  ::selection { background: #0A0A0A; color: #fff; }
+
+  /* fade-in on scroll */
+  .reveal { opacity: 0; transform: translateY(18px); transition: opacity .9s cubic-bezier(.2,.6,.2,1), transform .9s cubic-bezier(.2,.6,.2,1); }
+  .reveal.in  { opacity: 1; transform: none; }
+  .reveal-delay-1 { transition-delay: .08s; }
+  .reveal-delay-2 { transition-delay: .16s; }
+  .reveal-delay-3 { transition-delay: .24s; }
+  .reveal-delay-4 { transition-delay: .32s; }
+
+  /* hairline border util */
+  .hairline { box-shadow: inset 0 0 0 1px #E7E5E0; }
+
+  /* marquee */
+  @keyframes marquee { from { transform: translateX(0) } to { transform: translateX(-50%) } }
+  .marquee-track { animation: marquee 38s linear infinite; }
+
+  /* dot blink */
+  @keyframes blink { 0%, 60% { opacity: 1 } 80%, 100% { opacity: .25 } }
+  .live-dot { animation: blink 1.6s ease-in-out infinite; }
+
+  /* serif italic kerning */
+  .serif-it { font-family: 'Instrument Serif', serif; font-style: italic; font-weight: 400; letter-spacing: -0.01em; }
+
+  /* underline on link */
+  .link-u { background-image: linear-gradient(currentColor, currentColor); background-size: 100% 1px; background-repeat: no-repeat; background-position: 0 100%; transition: background-size .35s ease; }
+  .link-u:hover { background-size: 0% 1px; background-position: 100% 100%; }
+
+  /* arrow link */
+  .arrow-link .arr { transition: transform .35s cubic-bezier(.2,.6,.2,1); display:inline-block; }
+  .arrow-link:hover .arr { transform: translate(4px, -4px); }
+</style>
+
+<script src="https://unpkg.com/react@18.3.1/umd/react.development.js" integrity="sha384-hD6/rw4ppMLGNu3tX5cjIb+uRZ7UkRJ6BPkLpg4hAu/6onKUg4lLsHAs9EBPT82L" crossorigin="anonymous"></script>
+<script src="https://unpkg.com/react-dom@18.3.1/umd/react-dom.development.js" integrity="sha384-u6aeetuaXnQ38mYT8rp6sbXaQe3NL9t+IBXmnYxwkUI2Hw4bsp2Wvmx4yRQF1uAm" crossorigin="anonymous"></script>
+<script src="https://unpkg.com/@babel/standalone@7.29.0/babel.min.js" integrity="sha384-m08KidiNqLdpJqLq95G/LEi8Qvjl/xUYll3QILypMoQ65QorJ9Lvtp2RXYGBFj1y" crossorigin="anonymous"></script>
+</head>
+
+<body>
+  <div id="root"></div>
+
+  <script type="text/babel" src="src/data.jsx"></script>
+  <script type="text/babel" src="src/sections.jsx"></script>
+  <script type="text/babel" src="src/projects.jsx"></script>
+  <script type="text/babel" src="src/app.jsx"></script>
+</body>
+</html>
